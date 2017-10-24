@@ -41,14 +41,14 @@
             ->item(0)->childNodes->item(0)->nodeValue;
             $channel_desc = $channel->getElementsByTagName('description')
             ->item(0)->childNodes->item(0)->nodeValue;
-            $html = "<h1>$channel_title</h1>";
-            $html .= "<h5>$channel_desc</h5>";
+            $html = "<h1>$channel_title<br><small>$channel_desc</small></h1>";
+
             for($i = 0; $i< 10; $i++){
                 $itemtitle = $channel->getElementsByTagName('item')->item($i)->getElementsByTagName('title')->item(0)->nodeValue;
                 $itemtime = $channel->getElementsByTagName('item')->item($i)->getElementsByTagName('pubDate')->item(0)->nodeValue;
                 $itemlink = $channel->getElementsByTagName('item')->item($i)->getElementsByTagName('link')->item(0)->nodeValue;
                 $index = $i + 1;
-                $html .= "<tr><td>$index</td><td><a href = '$itemlink' target = _blank>$itemtitle</a></td><td>$itemtime</td></tr>";
+                $html .= "<tr><td>$index</td><td><a href = 'content.php?link=$itemlink' target = _blank>$itemtitle</a></td><td>$itemtime</td></tr>";
             }
             echo $html;
             ?>			
