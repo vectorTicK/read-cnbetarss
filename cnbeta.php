@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    
 	<table class="table">
 		<thead>
 			<tr>
@@ -54,7 +55,17 @@
             ?>			
         </tbody>
     </table>
-    <div></div>
+    <div>
+    <ul class="pagination">
+    <li><a href="<?php echo "http://www.baidu.com";?>">上一页</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+</ul>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
